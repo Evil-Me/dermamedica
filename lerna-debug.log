@@ -1,0 +1,10 @@
+0 silly argv { _: [ 'bootstrap' ], lernaVersion: '4.0.0', '$0': 'lerna' }
+1 notice cli v4.0.0
+2 verbose rootPath /Users/nathalieschonwetter/Development/kunden/zahnoase/dermamedica
+3 error Error: Invalid package name "Corona-Testcenter Backend": name can only contain URL-friendly characters
+3 error     at invalidPackageName (/Users/nathalieschonwetter/.nvm/versions/node/v16.13.0/lib/node_modules/lerna/node_modules/npm-package-arg/npa.js:84:15)
+3 error     at Result.setName (/Users/nathalieschonwetter/.nvm/versions/node/v16.13.0/lib/node_modules/lerna/node_modules/npm-package-arg/npa.js:119:11)
+3 error     at new Result (/Users/nathalieschonwetter/.nvm/versions/node/v16.13.0/lib/node_modules/lerna/node_modules/npm-package-arg/npa.js:110:10)
+3 error     at Function.resolve (/Users/nathalieschonwetter/.nvm/versions/node/v16.13.0/lib/node_modules/lerna/node_modules/npm-package-arg/npa.js:54:15)
+3 error     at new Package (/Users/nathalieschonwetter/.nvm/versions/node/v16.13.0/lib/node_modules/lerna/node_modules/@lerna/package/index.js:95:26)
+3 error     at /Users/nathalieschonwetter/.nvm/versions/node/v16.13.0/lib/node_modules/lerna/node_modules/@lerna/project/index.js:207:26

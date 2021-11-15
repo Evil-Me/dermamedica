@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Corona Teststation QRCode Test</title>
+</head>
+<body>
+
+<!--script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+
+<h1>Corona-Testcenter Dermamedica</h1>
+
+<table cellpadding="10" cellspacing="16">
+  <tr>
+    <td>
+      <h2>Nachname</h2>
+      <h4>Schönwetter</h4>
+      <div id="surname"></div>
+    </td>
+    <td>
+      <h2>Vorname</h2>
+      <h4>Nathalie</h4>
+      <div id="firstname"></div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <h2>Geburtsdatum</h2>
+      <h4>18.05.1983</h4>
+      <div id="birthdate"></div>
+    </td>
+    <td>
+      <h2>Email</h2>
+      <h4>nathalie@cfw-ag</h4>
+      <div id="email"></div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <h2>ID Nummer</h2>
+      <h4>0123456789</h4>
+      <div id="idnumber"></div>
+    </td>
+    <td>
+      <h2>Telefonnummer</h2>
+      <h4>9876543210</h4>
+      <div id="phonenumber"></div>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  // var surname = new QRCode(document.getElementById("surname"), {
+  //   text: "Schönwetter",
+  //   width: 128,
+  //   height: 128,
+  //   colorDark : "#000000",
+  //   colorLight : "#ffffff",
+  //   correctLevel : QRCode.CorrectLevel.H
+  // });
+  //
+  // var firstbame = new QRCode(document.getElementById("firstname"), {
+  //   text: "Nathalie",
+  //   width: 128,
+  //   height: 128,
+  //   colorDark : "#000000",
+  //   colorLight : "#ffffff",
+  //   correctLevel : QRCode.CorrectLevel.H
+  // });
+  //
+  // var birthdate = new QRCode(document.getElementById("birthdate"), {
+  //   text: "18.05.1983",
+  //   width: 128,
+  //   height: 128,
+  //   colorDark : "#000000",
+  //   colorLight : "#ffffff",
+  //   correctLevel : QRCode.CorrectLevel.H
+  // });
+  //
+  // var email = new QRCode(document.getElementById("email"), {
+  //   text: "nathalie@cfw-ag.ch",
+  //   width: 128,
+  //   height: 128,
+  //   colorDark : "#000000",
+  //   colorLight : "#ffffff",
+  //   correctLevel : QRCode.CorrectLevel.H
+  // });
+  //
+  // var idnumber = new QRCode(document.getElementById("idnumber"), {
+  //   text: "0123456789",
+  //   width: 128,
+  //   height: 128,
+  //   colorDark : "#000000",
+  //   colorLight : "#ffffff",
+  //   correctLevel : QRCode.CorrectLevel.H
+  // });
+  //
+  // var phonenumber = new QRCode(document.getElementById("phonenumber"), {
+  //   text: "9876543210",
+  //   width: 128,
+  //   height: 128,
+  //   colorDark : "#000000",
+  //   colorLight : "#ffffff",
+  //   correctLevel : QRCode.CorrectLevel.H
+  // });
+
+  new QRious({element: document.getElementById("email"), value: "https://webisora.com"});
+</script>
+</body>
+</html>
