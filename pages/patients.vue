@@ -28,7 +28,7 @@
       </b-table-column>
 
       <b-table-column field="date" label="Geburtstag" v-slot="props">
-        {{ new Date(props.row.date).toLocaleDateString() }}
+        {{ props.row.date }}
       </b-table-column>
 
       <b-table-column field="email" label="Email" v-slot="props">
@@ -45,10 +45,6 @@
 
       <b-table-column field="app" label="Zertifikat per App" v-slot="props">
         {{ props.row.app ? 'Ja' : 'Nein' }}
-      </b-table-column>
-
-      <b-table-column field="wish" label="Zertifikatswunsch" v-slot="props">
-        {{ props.row.wish ? 'Privat' : 'Gesetzlich' }}
       </b-table-column>
 
       <template #empty>

@@ -28,18 +28,8 @@
 
     <div class="row">
       <div class="column">
-        <b-field label="Bitte geben Sie Ihr Geburtsdatum an" :type="{'is-danger': validations.date.hasError }" :message="validations.date.errorText">
-          <b-datepicker
-            v-model="date"
-            :show-week-number="showWeekNumber"
-            :locale="locale"
-            placeholder="Bitte auswählen..."
-            icon="calendar-today"
-            :icon-right="date ? 'close-circle' : ''"
-            icon-right-clickable
-            @icon-right-click="clearDate"
-            trap-focus>
-          </b-datepicker>
+        <b-field id="date" label="Geburtsdatum (TT.MM.JJJJ)" :type="{'is-danger': validations.date.hasError }" :message="validations.date.errorText">
+          <b-input placeholder="15.08.1971" type="date" v-model="date"></b-input>
         </b-field>
       </div>
 
@@ -146,8 +136,7 @@ export default {
       showWeekNumber: false,
       locale: undefined,
       app: null,
-      wish: null,
-      fields: ['last_name', 'first_name', 'date', 'street', 'zip', 'city', 'id_number', 'email', 'phone', 'app', 'wish', 'certificateID'],
+      fields: ['last_name', 'first_name', 'date', 'street', 'zip', 'city', 'id_number', 'email', 'phone', 'app', 'certificateID'],
       validations: {
         last_name: {type: 'text', errorText: '', hasError: false},
         first_name: {type: 'text', errorText: '', hasError: false},
@@ -159,7 +148,6 @@ export default {
         email: {type: 'email', errorText: '', hasError: false},
         phone: {type: 'phone', errorText: '', hasError: false},
         app: {type: 'boolean', errorText: '', hasError: false},
-        wish: {type: 'none', errorText: '', hasError: false},
         certificateID: {type: 'none', errorText: '', hasError: false},
       }
     }
@@ -184,7 +172,6 @@ export default {
           email: this.email,
           phone: this.phone,
           app: (this.app === 'true'),
-          wish: (this.wish === 'true'),
           certificateID: this.certificateID,
         }
 

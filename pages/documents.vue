@@ -38,9 +38,9 @@
         <div class="col">
           <header class="header">
             <h4>Geburtsdatum</h4>
-            <div> {{ new Date(patient.date).toLocaleDateString() }}</div>
+            <div> {{ patient.date }}</div>
           </header>
-          <vue-qrcode :value="new Date(patient.date).toLocaleDateString()" :options="{ width: size }" class="qrcode"></vue-qrcode>
+          <vue-qrcode :value="patient.date" :options="{ width: size }" class="qrcode"></vue-qrcode>
         </div>
       </div>
 
@@ -126,6 +126,8 @@
           </div>
         </div>
       </footer>
+
+      <vue-qrcode :value="'&#9;'" :options="{ width: 80 }" class="qrcode qr-tab"></vue-qrcode>
     </div>
   </section>
 </template>
@@ -260,6 +262,12 @@
 
   .qrcode-small {
     margin-left: -12px;
+  }
+
+  .qr-tab {
+    position: absolute;
+    bottom: 0;
+    right: -82px;
   }
 
   .qrcode,
